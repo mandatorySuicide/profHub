@@ -1,0 +1,21 @@
+{
+  "from": "mahmudazaman0509@gmail.com",
+  "sendersName":"Dewan Mahmuda Zaman",
+  "profs": [
+    {
+      "email": "najim.ju@gmail.com",
+      "salutation": "Dr.",
+      "subject": "Application for Research Assistantship",
+      "fileNames": "Dewan_Mahmuda_Zaman.pdf",
+      "emailTemplateName": "ai",
+      "name": "PROF_NAME"
+    }
+  ],
+  "defaultSubject": "Application for Research Assistantship",
+  "emailTemplates": [
+    {
+      "name": "ai",
+      "text": "Dear %s,\n\nHope this email finds you well.\n\nI am writing this email to express my interest in any opportunity for postgraduate research under your supervision.\n\nI am %s and I have completed my BSc in Computer Science and Engineering from Stamford University Bangladesh with CGPA 3.66/4.00 (Departmental position 4th).  I would like to build a path of research on Artificial Intelligence and your research interests inspire me a lot. Therefore, I am interested to know more about your current researches and possible openings. Moreover, I have recently sat for the IELTS exam and my overall IELTS score is 6.5 (Listening-7.5, Reading-6.5, Speaking-6.5, Writing-5.5).\n\nIt will be a great privilege for me if you kindly consider me in your research group and give me a chance to prove my potentiality in the research area.\n\nI have attached my CV to this email for your kind perusal but if there is additional information that I have not included that you would like, I would be happy to provide it to you.\n\nI thank you for your consideration and look forward to hearing from you.\n\n\nSincerely yours,\n%s\n"
+    }
+  ]
+}

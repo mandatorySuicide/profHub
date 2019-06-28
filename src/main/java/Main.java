@@ -10,6 +10,11 @@ public class Main {
     for (String arg : args) {
       System.out.println(arg);
     }
+    //
+    //    System.out.println(" I am working");
+    //    Scanner sc = new Scanner(System.in);
+    //    int next = Integer.parseInt(sc.next());
+    //    System.out.println("You entered " + next);
     try {
       String url = getUrlFromArgs(args);
       System.out.println("Config URL " + url);

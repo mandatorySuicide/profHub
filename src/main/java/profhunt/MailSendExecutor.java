@@ -132,7 +132,7 @@ public class MailSendExecutor {
             + prof
             + "\nWith Subject : "
             + subject + "\nPress(y|Y) to continue...");
-    return takeConcent();
+    return takeConsent();
   }
 
   private String findEmailTemplate(String emailTemplateName, List<EmailTemplate> emailTemplates) {
@@ -167,7 +167,7 @@ public class MailSendExecutor {
     return String.format("%s %s", prof.getSalutation(), prof.getName());
   }
 
-  private boolean takeConcent() {
+  private boolean takeConsent() {
     try {
       Scanner sc = new Scanner(System.in);
       String s = sc.nextLine();

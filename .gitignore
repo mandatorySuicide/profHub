@@ -62,6 +62,9 @@ hs_err_pid*
 # CMake
 cmake-build-*/
 
+build/
+.gradle/
+
 # Mongo Explorer plugin
 .idea/**/mongoSettings.xml
 

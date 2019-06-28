@@ -24,7 +24,8 @@ public class Main {
       String sendersEmailPassword = getPasswordFromArgs(args);
       System.out.println(
           "Sender's Email " + sendersEmail + "\nSender's Email Password " + sendersEmailPassword);
-      MailSendExecutor mailSendExecutor = new MailSendExecutor(sendersEmail, sendersEmailPassword);
+      MailSendExecutor mailSendExecutor =
+          new MailSendExecutor(sendersEmail, sendersEmailPassword, getCvPath(args));
       MailSender mailSender = new MailSenderImpl(url, configParser, objectMapper, mailSendExecutor);
       mailSender.run();
     } catch (Exception e) {
@@ -34,7 +35,12 @@ public class Main {
     }
   }
 
+  private static String getCvPath(String[] args) {
+    return getValue(args, "-c", "path_to_your_cv");
+  }
+
   private static String getPasswordFromArgs(String[] args) {
+
     return getValue(args, "-p", "password");
   }
 

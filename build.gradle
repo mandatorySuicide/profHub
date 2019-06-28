@@ -1,6 +1,8 @@
 plugins {
-    id 'java'
+//    id 'java'
+    id 'application'
 }
+
 
 group 'co.ftwelve'
 version '1.0'
@@ -28,10 +30,14 @@ jar {
     }
     from(configurations.compile.collect { it.isDirectory() ? it : zipTree(it) })
 }
+mainClassName="Main"
 
-task stream( type: JavaExec, dependsOn: assemble ){
+run{
     standardInput = System.in
-    classpath sourceSets.main.runtimeClasspath
-    main = "Main"
-    args "arg1", "arg2"
 }
+
+//task stream(type: JavaExec, dependsOn: assemble) {
+//    standardInput = System.in
+//    classpath sourceSets.main.runtimeClasspath
+//    main = "Main"
+//}

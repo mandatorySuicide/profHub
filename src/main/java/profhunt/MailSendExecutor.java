@@ -8,15 +8,13 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import java.io.File;
 import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+
 import profhunt.pojo.Config;
 import profhunt.pojo.EmailTemplate;
 import profhunt.pojo.Prof;
@@ -24,10 +22,12 @@ import profhunt.pojo.Prof;
 public class MailSendExecutor {
   private final String userName;
   private final String password;
+  private final String cvPath;
 
-  public MailSendExecutor(String userName, String password) {
+  public MailSendExecutor(String userName, String password, String cvPath) {
     this.userName = userName;
     this.password = password;
+    this.cvPath = cvPath;
   }
 
   public void sendMail(Config cfg) throws InterruptedException {
@@ -35,7 +35,7 @@ public class MailSendExecutor {
     cfg.getProfs()
         .forEach(
             prof -> {
-              clearScreen();
+              // clearScreen();
               try {
                 Properties prop = new Properties();
                 prop.put("mail.smtp.host", "smtp.gmail.com");
@@ -75,7 +75,8 @@ public class MailSendExecutor {
                     .forEach(
                         fileName -> {
                           try {
-                            MimeBodyPart mimeBodyPart = buildMimeBodyPart(fileName);
+                            System.out.println("Going to attach a file from " + cvPath + "...");
+                            MimeBodyPart mimeBodyPart = buildMimeBodyPart(fileName, cvPath);
                             multipart.addBodyPart(mimeBodyPart);
                           } catch (Exception e) {
                             throw new RuntimeException("MimeBodyPart failed");
@@ -131,7 +132,8 @@ public class MailSendExecutor {
             + "\nProf Details : \n"
             + prof
             + "\nWith Subject : "
-            + subject + "\nPress(y|Y) to continue...");
+            + subject
+            + "\nPress(y|Y) to continue...");
     return takeConsent();
   }
 
@@ -178,15 +180,15 @@ public class MailSendExecutor {
     }
   }
 
-  private MimeBodyPart buildMimeBodyPart(String fileName)
-      throws MessagingException, URISyntaxException {
+  private MimeBodyPart buildMimeBodyPart(String fileName, String cvPath) throws MessagingException {
     MimeBodyPart mimeBodyPart = new MimeBodyPart();
-    URL res = this.getClass().getClassLoader().getResource(fileName);
-    File file = Paths.get(res.toURI()).toFile();
-    String cv = file.getAbsolutePath();
-    DataSource source = new FileDataSource(cv);
+    System.out.println("Trying to attach CV from " + cvPath + ", fileName=" + fileName);
+    if (!cvPath.endsWith("\\")) {
+      cvPath += "\\";
+    }
+    DataSource source = new FileDataSource(cvPath + fileName);
     mimeBodyPart.setDataHandler(new DataHandler(source));
-    mimeBodyPart.setFileName(fileName);
+    //    mimeBodyPart.setFileName(fileName);
     return mimeBodyPart;
   }
 }

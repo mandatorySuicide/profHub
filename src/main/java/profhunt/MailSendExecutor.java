@@ -32,10 +32,14 @@ public class MailSendExecutor {
 
   public void sendMail(Config cfg) throws InterruptedException {
     StringBuilder builder = new StringBuilder();
+    final int count[] = new int[] {0};
     cfg.getProfs()
         .forEach(
             prof -> {
-              // clearScreen();
+              count[0]++;
+              if (count[0] % 5 == 0) {
+                clearScreen();
+              }
               try {
                 Properties prop = new Properties();
                 prop.put("mail.smtp.host", "smtp.gmail.com");

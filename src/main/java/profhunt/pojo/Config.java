@@ -1,23 +1,24 @@
 package profhunt.pojo;
 
-
 import java.util.List;
 
 public class Config {
-  private String from;
+
   private String sendersName;
+  private String defaultSalutation;
   private List<Prof> profs;
   private String defaultSubject;
   private List<EmailTemplate> emailTemplates;
+  private String defaultEmailTemplate;
 
   @Override
   public String toString() {
     return "Config{"
-        + "from='"
-        + from
-        + '\''
-        + ", sendersName='"
+        + "sendersName='"
         + sendersName
+        + '\''
+        + ", defaultSalutation='"
+        + defaultSalutation
         + '\''
         + ", profs="
         + profs
@@ -26,15 +27,10 @@ public class Config {
         + '\''
         + ", emailTemplates="
         + emailTemplates
+        + ", defaultEmailTemplate='"
+        + defaultEmailTemplate
+        + '\''
         + '}';
-  }
-
-  public String getFrom() {
-    return from;
-  }
-
-  public void setFrom(String from) {
-    this.from = from;
   }
 
   public String getSendersName() {
@@ -43,6 +39,14 @@ public class Config {
 
   public void setSendersName(String sendersName) {
     this.sendersName = sendersName;
+  }
+
+  public String getDefaultSalutation() {
+    return defaultSalutation;
+  }
+
+  public void setDefaultSalutation(String defaultSalutation) {
+    this.defaultSalutation = defaultSalutation;
   }
 
   public List<Prof> getProfs() {
@@ -67,5 +71,13 @@ public class Config {
 
   public void setEmailTemplates(List<EmailTemplate> emailTemplates) {
     this.emailTemplates = emailTemplates;
+  }
+
+  public String getDefaultEmailTemplate() {
+    return defaultEmailTemplate;
+  }
+
+  public void setDefaultEmailTemplate(String defaultEmailTemplate) {
+    this.defaultEmailTemplate = defaultEmailTemplate;
   }
 }

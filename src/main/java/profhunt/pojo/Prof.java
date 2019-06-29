@@ -1,28 +1,33 @@
 package profhunt.pojo;
 
+import java.util.List;
+
 public class Prof {
+  private String name;
+  private String email;
+  private String salutation;
+  private String subject;
+  private String emailTemplate;
+  private List<FileToAttach> fileNames;
+
   @Override
   public String toString() {
-    return "Prof{"
-        + "email='"
-        + email
-        + '\''
-        + ", salutation='"
-        + salutation
-        + '\''
-        + ", subject='"
-        + subject
-        + '\''
-        + ", fileNames='"
-        + fileNames
-        + '\''
-        + ", emailTemplateName='"
-        + emailTemplateName
-        + '\''
-        + ", name='"
-        + name
-        + '\''
-        + '}';
+    return "Prof{" +
+            "name='" + name + '\'' +
+            ", email='" + email + '\'' +
+            ", salutation='" + salutation + '\'' +
+            ", subject='" + subject + '\'' +
+            ", emailTemplate='" + emailTemplate + '\'' +
+            ", fileNames=" + fileNames +
+            '}';
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public String getEmail() {
@@ -49,34 +54,19 @@ public class Prof {
     this.subject = subject;
   }
 
-  public String getFileNames() {
+  public String getEmailTemplate() {
+    return emailTemplate;
+  }
+
+  public void setEmailTemplate(String emailTemplate) {
+    this.emailTemplate = emailTemplate;
+  }
+
+  public List<FileToAttach> getFileNames() {
     return fileNames;
   }
 
-  public void setFileNames(String fileNames) {
+  public void setFileNames(List<FileToAttach> fileNames) {
     this.fileNames = fileNames;
   }
-
-  public String getEmailTemplateName() {
-    return emailTemplateName;
-  }
-
-  public void setEmailTemplateName(String emailTemplateName) {
-    this.emailTemplateName = emailTemplateName;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  private String email;
-  private String salutation;
-  private String subject;
-  private String fileNames;
-  private String emailTemplateName;
-  private String name;
 }

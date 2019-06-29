@@ -13,7 +13,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import profhunt.pojo.Config;
 import profhunt.pojo.EmailTemplate;
@@ -67,7 +66,7 @@ public class MailSendExecutor {
                 BodyPart messageBodyPart = new MimeBodyPart();
                 String bodyText =
                     String.format(
-                        findEmailTemplate(prof.getEmailTemplateName(), cfg.getEmailTemplates()),
+                        findEmailTemplate(prof.getEmailTemplate(), cfg.getEmailTemplates()),
                         makeProfNameWithSalutation(prof),
                         cfg.getSendersName(),
                         cfg.getSendersName());

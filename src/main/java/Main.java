@@ -4,17 +4,17 @@ import profhunt.MailSendExecutor;
 import profhunt.MailSender;
 import profhunt.MailSenderImpl;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
 public class Main {
 
   public static void main(String[] args) {
+    System.out.println("Passed Arguments : ");
     for (String arg : args) {
       System.out.println(arg);
     }
-    //
-    //    System.out.println(" I am working");
-    //    Scanner sc = new Scanner(System.in);
-    //    int next = Integer.parseInt(sc.next());
-    //    System.out.println("You entered " + next);
     try {
       String url = getUrlFromArgs(args);
       System.out.println("Config URL " + url);
@@ -36,20 +36,27 @@ public class Main {
   }
 
   private static String getCvPath(String[] args) {
-    return getValue(args, "-c", "path_to_your_cv");
+    String path = getValue(args, "-c", "path to your resource folder");
+    if (Files.exists(Paths.get(path))) {
+      return path;
+    }
+    throw new RuntimeException(
+        "Path "
+            + path
+            + "Does not exist. Please put all your necessary resources in one folder and use it at path");
   }
 
   private static String getPasswordFromArgs(String[] args) {
 
-    return getValue(args, "-p", "password");
+    return getValue(args, "-p", "email password");
   }
 
   private static String getUserNameFromArgs(String[] args) {
-    return getValue(args, "-e", "your_email");
+    return getValue(args, "-e", "your email");
   }
 
   private static String getUrlFromArgs(String[] args) {
-    return getValue(args, "-u", "config_url");
+    return getValue(args, "-u", "configuration url");
   }
 
   private static String getValue(String[] args, String key, String keyFor) {
@@ -64,9 +71,13 @@ public class Main {
         }
       }
     }
-    throw new RuntimeException(
-        String.format(
-            "Could not resolve %s, please use %s=%s flag properly, read the read me file carefully and follow the instruction",
-            keyFor, key, keyFor));
+    System.out.println("Enter %s" + keyFor + " : ");
+    Scanner sc = new Scanner(System.in);
+    return sc.nextLine();
+    //    throw new RuntimeException(
+    //        String.format(
+    //            "Could not resolve %s, please use %s=%s flag properly, read the read me file
+    // carefully and follow the instruction",
+    //            keyFor, key, keyFor));
   }
 }

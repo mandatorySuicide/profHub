@@ -71,7 +71,7 @@ public class Main {
         }
       }
     }
-    System.out.println("Enter %s" + keyFor + " : ");
+    System.out.println("Enter " + keyFor + " : ");
     Scanner sc = new Scanner(System.in);
     return sc.nextLine();
     //    throw new RuntimeException(

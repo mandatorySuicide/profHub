@@ -25,7 +25,7 @@ public class Main {
       System.out.println(
           "Sender's Email " + sendersEmail + "\nSender's Email Password " + sendersEmailPassword);
       MailSendExecutor mailSendExecutor =
-          new MailSendExecutor(sendersEmail, sendersEmailPassword, getCvPath(args));
+          new MailSendExecutor(sendersEmail, sendersEmailPassword, getResourceDirectory(args));
       MailSender mailSender = new MailSenderImpl(url, configParser, objectMapper, mailSendExecutor);
       mailSender.run();
     } catch (Exception e) {
@@ -35,7 +35,7 @@ public class Main {
     }
   }
 
-  private static String getCvPath(String[] args) {
+  private static String getResourceDirectory(String[] args) {
     String path = getValue(args, "-c", "path to your resource folder");
     if (Files.exists(Paths.get(path))) {
       return path;

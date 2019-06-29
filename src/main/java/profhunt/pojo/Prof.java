@@ -8,7 +8,7 @@ public class Prof {
   private String salutation;
   private String subject;
   private String emailTemplate;
-  private List<FileToAttach> fileNames;
+  private List<FileToAttach> attachments;
 
   @Override
   public String toString() {
@@ -18,7 +18,7 @@ public class Prof {
             ", salutation='" + salutation + '\'' +
             ", subject='" + subject + '\'' +
             ", emailTemplate='" + emailTemplate + '\'' +
-            ", fileNames=" + fileNames +
+            ", attachments=" + attachments +
             '}';
   }
 
@@ -62,11 +62,11 @@ public class Prof {
     this.emailTemplate = emailTemplate;
   }
 
-  public List<FileToAttach> getFileNames() {
-    return fileNames;
+  public List<FileToAttach> getAttachments() {
+    return attachments;
   }
 
-  public void setFileNames(List<FileToAttach> fileNames) {
-    this.fileNames = fileNames;
+  public void setAttachments(List<FileToAttach> attachments) {
+    this.attachments = attachments;
   }
 }

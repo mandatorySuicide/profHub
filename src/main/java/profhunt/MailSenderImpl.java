@@ -24,7 +24,7 @@ public class MailSenderImpl extends MailSender {
 
   @Override
   protected void executeMailSend(Config cfg) throws InterruptedException {
-    mailSendExecutor.sendMail(cfg);
+    mailSendExecutor.sendEmails(cfg);
   }
 
   @Override

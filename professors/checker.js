@@ -14,10 +14,12 @@ fs.readFile('./1.0/upm.json', 'utf8', function(err, contents) {
         let {name,email}=prof;
         let key = name.trim().toLowerCase();
         if(seen[key]){
-            throw new Error(`Professor already listed ${JSON.stringify({name,email})}`);
+            console.log("\x1b[41m",`Professor already listed ${JSON.stringify({name,email})}`);
+            throw new Error(`Professor already listed`);
         }
         else if(inconvinientEmail(name,email)){
-            console.error("Inconvinient professor name,email combination",JSON.stringify({name,email}));
+            //console.log(, stringToMakeYellow);  //yellow
+            console.log('\x1b[33m%s\x1b[0m',`Inconvinient professor name,email combination ${JSON.stringify({name,email})}`);
         }
         seen[key]=true;
     });

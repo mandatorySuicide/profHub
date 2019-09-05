@@ -1,0 +1,155 @@
+{
+    "sendersName": "Md Najim Ahmed",
+    "profs": [
+        {
+            "name": "Azuraliza Abu Bakar",
+            "email": "aab@ukm.edu.my",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Haslina Arshad",
+            "email": "Haslinaarshad@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Khairuddin Omar",
+            "email": "Ko@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Salwani Abdullah",
+            "email": "salwani@ukm.edu.my",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Shahrul Azman Mohd Noah",
+            "email": "Shahrul@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Shahnorbanun Sahran",
+            "email": "Shahorbanun@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Azizi Abdullah",
+            "email": "Azizia@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Md. Jan Nordin",
+            "email": "Jan@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Mohammad Faidzul Nasrudin",
+            "email": "Mfn@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Mohammad Khatim Hasan",
+            "email": "mkh@ukm.edu.my",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Mohd Zakree Ahmad Nazri",
+            "email": "zakree@ukm.edu.my",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        
+        {
+            "name": "Nazlia Omar",
+            "email": "nazlia@ukm.edu.my",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Zalinda Othman",
+            "email": "Zalinda@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Zulaiha Ali Othman",
+            "email": "Zao@Ukm.Edu.My",
+            "attachments": [
+                {
+                    "name": "Najim-cv-academic.pdf",
+                    "renameTo": "Md_Najim_Ahmed.pdf"
+                }
+            ]
+        }
+    ],
+    "defaultSubject": "Application for Research Assistantship",
+    "defaultSalutation": "Dr.",
+    "defaultEmailTemplate": "default",
+    "emailTemplates": [
+        {
+            "name": "default",
+            "text": "Dear %s,\n\nI am writing this email to express my interest in pursuing my postgraduate research under your supervision.\n\nI am Md Najim Ahmed and I have completed my BSc in Computer Science and Engineering from Jahangirnagar University, Bangladesh with CGPA 3.18/4.00 in English as the medium of instruction. During my academic years, I have participated in several programming contests with remarkable performance record and served as a Teaching Assistant for more than two years. After working for 5 years as a software development professional I feel the urge to acquire specialized knowledge in the field of information & technology which motivates me for doing higher study.\n\nMoreover, I have found that my area of interest greatly intersects with your research work. I would appreciate the chance to talk about your upcoming research projects and pitch to you how my outstanding programming skill and year-long industrial experience makes me a great candidate.\n\nI have attached my CV in the attachment to this email for your kind perusal but if there is additional information that I have not included that you would like, I would be happy to provide it to you.\n\nI thank you for your consideration and look forward to hearing from you.\n\nSincerely yours,\nMd Najim Ahmed\n"
+        }
+    ]
+}

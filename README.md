@@ -22,3 +22,6 @@ java -jar build\libs\profhunter-1.0.jar -e=your_email@gmail.com -p=your_password
 - press enter
 - then cd to the root directory of the project
 - java -jar .\build\libs\profhunter-1.0.jar
+
+# Version
+1.0

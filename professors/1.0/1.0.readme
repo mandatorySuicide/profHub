@@ -1,2 +1,2 @@
 Most basic working version
-node checker.js ukm_ai.json ukm_swe.json um_ai.json upm.json 
+node checker.js ukm_ai.json ukm_swe.json um_ai.json um_swe.json upm.json

@@ -23,7 +23,8 @@ public class Main {
       String sendersEmail = getUserNameFromArgs(args);
       String sendersEmailPassword = getPasswordFromArgs(args);
       System.out.println(
-          "Sender's Email " + sendersEmail + "\nSender's Email Password " + sendersEmailPassword);
+          "Sender's Email [" + sendersEmail + "]\nSender's Email Password [" +
+              sendersEmailPassword + "]");
       MailSendExecutor mailSendExecutor =
           new MailSendExecutor(sendersEmail, sendersEmailPassword, getResourceDirectory(args));
       MailSender mailSender = new MailSenderImpl(url, configParser, objectMapper, mailSendExecutor);
@@ -43,7 +44,8 @@ public class Main {
     throw new RuntimeException(
         "Path "
             + path
-            + "Does not exist. Please put all your necessary resources in one folder and use it at path");
+            +
+            "Does not exist. Please put all your necessary resources in one folder and use it at path");
   }
 
   private static String getPasswordFromArgs(String[] args) {

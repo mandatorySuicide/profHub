@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: Main
-Class-Path: lib/mail-1.4.jar lib/jackson-databind-2.9.9.jar lib/jackson-
- annotations-2.9.9.jar lib/jackson-core-2.9.9.jar lib/activation-1.1.jar
-

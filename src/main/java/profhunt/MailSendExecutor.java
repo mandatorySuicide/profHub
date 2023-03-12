@@ -65,6 +65,7 @@ public class MailSendExecutor {
                                         System.out.println("Sent message successfully....");
                                     } catch (MessagingException e) {
                                         System.out.println("Message sending failed :(");
+                                        e.printStackTrace();
                                         throw new RuntimeException(e);
                                     }
                                 } else {

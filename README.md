@@ -30,3 +30,7 @@ To send email to professors automatically(&amp;safely,&amp;transparently)
 This app is intended to run using gmail. To enable automatic email from apps as of 2023,March this is the approach
 - Google Account Settings->Security->Enable2fa->Generate apppassword
 - Use the generated apppassword.
+
+# Update 2:
+Google keeps changing way to generate APP password. This time I tried this - https://myaccount.google.com/apppasswords 
+But at first we need enable MFA

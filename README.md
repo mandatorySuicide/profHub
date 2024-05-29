@@ -36,4 +36,4 @@ Google keeps changing way to generate APP password. This time I tried this - htt
 But at first we need enable MFA
 
 # Update 3:
-For testing we can use this JSON https://pastebin.com/wqV7a26w
+For testing we can use this JSON [https://pastebin.com/raw/wqV7a26w](https://pastebin.com/raw/wqV7a26w)

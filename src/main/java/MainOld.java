@@ -8,28 +8,25 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class Main {
+public class MainOld {
 
   public static void main(String[] args) {
+    System.out.println("Passed Arguments : ");
+    for (String arg : args) {
+      System.out.println(arg);
+    }
     try {
-      String sendersEmail = System.getenv("EMAIL");
-      String sendersEmailPassword = System.getenv("PASSWORD");
-      String url = System.getenv("URL");
-      String configPath = "/app/config";
-
-      if (sendersEmail == null || sendersEmailPassword == null || url == null ) {
-        System.err.println("Missing required environment variables.");
-        System.exit(1);
-      }
-
-      System.out.println("JSON Config URL " + url);
+      String url = getUrlFromArgs(args);
+      System.out.println("Config URL " + url);
       ConfigParser configParser = new ConfigParser();
       ObjectMapper objectMapper = new ObjectMapper();
+      String sendersEmail = getUserNameFromArgs(args);
+      String sendersEmailPassword = getPasswordFromArgs(args);
       System.out.println(
           "Sender's Email [" + sendersEmail + "]\nSender's Email Password [" +
               sendersEmailPassword + "]");
       MailSendExecutor mailSendExecutor =
-          new MailSendExecutor(sendersEmail, sendersEmailPassword, configPath);
+          new MailSendExecutor(sendersEmail, sendersEmailPassword, getResourceDirectory(args));
       MailSender mailSender = new MailSenderImpl(url, configParser, objectMapper, mailSendExecutor);
       mailSender.run();
     } catch (Exception e) {

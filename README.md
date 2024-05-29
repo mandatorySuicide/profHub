@@ -34,3 +34,6 @@ This app is intended to run using gmail. To enable automatic email from apps as 
 # Update 2:
 Google keeps changing way to generate APP password. This time I tried this - https://myaccount.google.com/apppasswords 
 But at first we need enable MFA
+
+# Update 3:
+For testing we can use this JSON https://pastebin.com/wqV7a26w

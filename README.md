@@ -2,7 +2,7 @@
 ## Install docker on your machine:
 - For the ease of usage the solution has been based on docker.
 - Install docker in your OS, it's just as installing a new software. **Please take note, docker (and hence this solution) may not work on windows laptop with 4GB Ram. The recommended is at least 6GB or 8GB of RAM**. 
-- Open cmd(windows) / terminal on linux or mac and make sure docker is running by making `sure docker ps -a` command.  If everything ok , then the first line of output should look like this -
+- Open cmd(windows) / terminal on linux or mac and make sure docker is running `docker ps -a` command.  If everything ok , then the first line of output should look like this -
 ![img.png](img.png)
 - There are an enormous number of blogs that explains how to install docker on your OS, so please make sure you follow one of them and are able to run docker successfully on your machine.
 
